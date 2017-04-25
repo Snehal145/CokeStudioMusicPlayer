@@ -1,0 +1,24 @@
+<div layout "row" ng-controller="songsController" ng-cloak>
+    <div flex="10"></div>
+    <div flex="80" class='m-20px-0'>
+
+        <md-toolbar class="md-warn md-hue-2">
+            <div class="md-toolbar-tools">
+                <div flex md-truncate>
+                    <h3 class="md-headline">{{name}}</h3>
+                </div>
+            </div>
+        </md-toolbar>
+        <md-content flex>
+            <div>
+                <img ng-src="{{imageUrl}}" width="100px" height:"100px">
+                <span<h3>{{artists}}</h3>
+                    </span>
+                    <audio controls="controls">
+                        <source src="{{songUrl}}" type="audio/ogg" />
+                        <source src="{{songUrl}}" type="audio/mpeg" /> Your browser does not support the audio element.
+                    </audio>
+            </div>
+        </md-content>
+    </div>
+</div>

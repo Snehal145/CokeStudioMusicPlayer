@@ -1,19 +1,8 @@
 app.controller('songsController', function ($scope, $mdDialog, $mdToast, songsFactory, $http) {
     //reading the products
     $scope.allSongs = [];
-
     $scope.getSongs = function () {
         $scope.songs = [];
-        // $http.get('http://starlord.hackerearth.com/sureify/cokestudio').then(function(response){
-        //     for(i=0;i<response.data.length;i++)
-        //     {
-        //         $scope.allSongs.push(response.data[i]);
-        //         $scope.songs.push($scope.allSongs[i].song);
-        //     }
-        // },
-        // function(error){
-        //     $scope.errortext = "No Songs found";
-        // });
         songsFactory.readProducts().then(function (response) {
             for (i = 0; i < response.data.length; i++) {
                 $scope.allSongs.push(response.data[i]);

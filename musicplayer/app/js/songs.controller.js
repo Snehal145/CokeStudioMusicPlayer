@@ -12,7 +12,6 @@ app.controller('songsController', function ($scope, $mdDialog, $mdToast, songsFa
             $scope.errorText = "No Songs found";
         });
     }
-
     $scope.readOneSong = function (song) {
         $scope.name = song.song;
         $scope.imageUrl = song.cover_image;
